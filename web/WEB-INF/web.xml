@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>ComentarioController</servlet-name>
+        <servlet-class>controller.ComentarioController</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>AdministradorController</servlet-name>
+        <servlet-class>controller.AdministradorController</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>UsuarioController</servlet-name>
+        <servlet-class>controller.UsuarioController</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>PostController</servlet-name>
+        <servlet-class>controller.PostController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ComentarioController</servlet-name>
+        <url-pattern>/Comentario/ingresar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioController</servlet-name>
+        <url-pattern>/Comentario/eliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioController</servlet-name>
+        <url-pattern>/Comentario/buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComentarioController</servlet-name>
+        <url-pattern>/Comentario/modificar</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AdministradorController</servlet-name>
+        <url-pattern>/Administrador/ingresar</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>AdministradorController</servlet-name>
+        <url-pattern>/Administrador/buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdministradorController</servlet-name>
+        <url-pattern>/Administrador/eliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdministradorController</servlet-name>
+        <url-pattern>/Administrador/modificar</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/Usuario/ingresar</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/Usuario/buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/Usuario/eliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsuarioController</servlet-name>
+        <url-pattern>/Usuario/modificar</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>PostController</servlet-name>
+        <url-pattern>/Post/ingresar</url-pattern>
+    </servlet-mapping>    
+    <servlet-mapping>
+        <servlet-name>PostController</servlet-name>
+        <url-pattern>/Post/buscar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostController</servlet-name>
+        <url-pattern>/Post/eliminar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostController</servlet-name>
+        <url-pattern>/Post/modificar</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
