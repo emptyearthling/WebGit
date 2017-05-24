@@ -24,8 +24,7 @@ public class ComentarioDAO {
 
     public void ingresar(Comentario c) {
         try {
-            String sql = "INSERT INTO Comentario VALUES("
-                    + c.getId() + ","
+            String sql = "INSERT INTO Comentario VALUES(null,"
                     + c.getUsuario_id() + ","
                     + c.getPost_id() + ",'"
                     + c.getComentario() + "',"

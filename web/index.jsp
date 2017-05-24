@@ -16,8 +16,8 @@
         <h1>Acceso a Cuenta</h1>
         
         <ul>
-            <li><a href="ingresaradministrador.jsp">Ingresar como Administrador</a></li>
-            <li><a href="ingresarusuario.jsp">Ingresar como Usuario</a></li>
+            <li><a href="ingresarAdministrador.jsp">Ingresar como Administrador</a></li>
+            <li><a href="ingresarUsuario.jsp">Ingresar como Usuario</a></li>
         </ul>
 
     </body>

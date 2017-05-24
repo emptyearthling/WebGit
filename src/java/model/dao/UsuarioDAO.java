@@ -28,7 +28,7 @@ public class UsuarioDAO {
 
     public void ingresar(Usuario u) {
           try{
-             String sql = "INSERT INTO Usuario VALUES ("+
+             String sql = "INSERT INTO Usuario VALUES (null,"+
                 u.getPerfil_id()+",'"+
                 u.getNombre()+"','"+
                 u.getApellido()+"','"+
@@ -48,7 +48,7 @@ public class UsuarioDAO {
     public void modificar(Usuario u, int id) {
   try{
                String sql = "UPDATE Post SET"
-                + "perfil_id =" + u.getPerfil_id()+ ","
+                
                 + "nombre ='" + u.getNombre()+ "',"
                 + "apellido = '" + u.getApellido()+ "',"
                 + "user = '" + u.getUser()+ "',"

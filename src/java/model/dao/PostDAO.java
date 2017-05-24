@@ -28,8 +28,7 @@ public class PostDAO {
 
     public void ingresar(Post p) {
           try{
-             String sql = "INSERT INTO Post VALUES("+
-                p.getId()+","+
+             String sql = "INSERT INTO Post VALUES(null,"+
                 p.getUsuario_id()+",'"+
                 p.getTitulo()+"','"+
                 p.getCuerpo()+"',"+

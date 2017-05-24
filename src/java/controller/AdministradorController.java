@@ -46,7 +46,7 @@ public class AdministradorController extends HttpServlet {
         switch (accion) {
             case "eliminar":
                 AdminDAO.eliminar(id);
-                response.sendRedirect("../listarProfesores.jsp");
+                response.sendRedirect("../listarAdministrador.jsp");
                 break;
             case "buscar":
                 Administrador a = AdminDAO.buscar(id);
@@ -69,11 +69,13 @@ public class AdministradorController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String nombres = request.getParameter("txtNombres");
-        String apellidos = request.getParameter("txtApellidos");
-        String correo = request.getParameter("txtCorreo");
-        String idUpdate = request.getParameter("txtId");
+        String nombres = request.getParameter("name");
+        String apellidos = request.getParameter("apel"); 
+        String correo = request.getParameter("mail");
+        int idUpdate = 1;
         
+        //hola kev!
+         
         System.out.print(idUpdate);
         AdministradorDAO AdminDAO = new AdministradorDAO();
         String ruta = request.getRequestURI();
@@ -92,7 +94,7 @@ public class AdministradorController extends HttpServlet {
                 Administrador pro = new Administrador();
                 pro.setNombre(nombres);
                 pro.setApellido(apellidos);
-                AdminDAO.modificar(pro, Integer.parseInt(idUpdate));
+                AdminDAO.modificar(pro, 1);
                 break;
             default:
                 throw new AssertionError();
