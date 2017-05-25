@@ -35,8 +35,8 @@
             
             <% for(Usuario u : Usuarios){ %>
             <tr>
-                <td><a href="Profesor/buscar?id=<%=u.getId()%>"><img src="img/edit.png" /></a></td>
-                <td><a href="Profesor/eliminar?id=<%=u.getId()%>"><img src="img/delete.png" /></a></td>
+                <td><a href="Usuario/buscar?id=<%=u.getId()%>"><img src="img/edit.png" /></a></td>
+                <td><a href="Usuario/eliminar?id=<%=u.getId()%>"><img src="img/delete.png" /></a></td>
                 <td><%=u.getId()%></td>
                 <td><%=u.getPerfil_id()%></td>
                 <td><%=u.getNombre()%></td>
@@ -46,11 +46,12 @@
                 <td><%=u.getEmail()%></td>
                 <td><%=u.getFechacreacion()%></td>
                 
+                
             </tr>
             
             <% } %>
         </table>
         
-        <a href="index.jsp">Volver</a>
+        <a href="index.html">Volver</a>
     </body>
 </html>

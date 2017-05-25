@@ -8,6 +8,7 @@ package model.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import model.dto.Usuario;
@@ -28,14 +29,19 @@ public class UsuarioDAO {
 
     public void ingresar(Usuario u) {
           try{
-             String sql = "INSERT INTO Usuario VALUES (null,"+
-                u.getPerfil_id()+",'"+
-                u.getNombre()+"','"+
-                u.getApellido()+"','"+
-                u.getUser()+"','"+
-                u.getPassword()+"','"+
-                u.getEmail()+"','"+
-                u.getFechacreacion()+"')";
+              String n = u.getNombre();
+              String a = u.getApellido();
+              String us = u.getUser();
+              String p = u.getPassword();
+              String e = u.getEmail();
+              String f = "24/05/17";
+                
+                
+              String sql = "INSERT INTO Usuario VALUES (null,2,"+"' "+n+"',"+"'"+a+"',"+"'"+us+"',"+"'"+p+"',"+"'"+e+"',"+"'"+f+"');";
+                           //String sql = "INSERT INTO Usuario (perfil_id, nombre, apellido, user, password, email, fechacreacion  ) VALUES (2,"+
+
+            
+                
 
         System.out.println(sql);
         con.update(sql);
@@ -47,15 +53,16 @@ public class UsuarioDAO {
 
     public void modificar(Usuario u, int id) {
   try{
-               String sql = "UPDATE Post SET"
+               String sql = "UPDATE Usuario SET "
                 
-                + "nombre ='" + u.getNombre()+ "',"
-                + "apellido = '" + u.getApellido()+ "',"
-                + "user = '" + u.getUser()+ "',"
-                + "password = '" + u.getPassword()+ "',"
-                + "email = '" + u.getEmail()+ "',"
-                + "fechacreacion = '" + u.getFechacreacion() +"'";
+                + "nombre ="+"'" + u.getNombre()+ "'"+","
+                + "apellido ="+"'" + u.getApellido()+ "'"+","
+                + "user ="+"'" + u.getUser()+ "'"+","
+                + "password ="+"'" + u.getPassword()+ "'"+","
+                + "email ="+"'" + u.getEmail()+ "'"+ " WHERE id = "+id;
+                
         
+        System.out.println(sql);       
         con.update(sql);
         }catch(Exception ex){
             
@@ -79,7 +86,7 @@ public class UsuarioDAO {
                 u.setNombre(datos.getString("nombre"));
                 u.setApellido(datos.getString("apellido"));
                 u.setEmail(datos.getString("email"));
-                u.setFechacreacion("fechacreacion");
+                u.setFechacreacion(datos.getString("fechacreacion"));
 
                 //agregar profesor a arraylist de profesores
                 Usuarios.add(u);

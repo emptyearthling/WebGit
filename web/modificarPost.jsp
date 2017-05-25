@@ -16,7 +16,7 @@
             vuelves el path a la raiz del sistema antes de hacer el nuevo request
             para subir un nivel en el arbol de directorio
         --%>
-        <form action="${pageContext.request.contextPath}/Comentario/modificar" method="POST">
+        <form action="${pageContext.request.contextPath}/Post/modificar" method="POST">
             <table border="0">
                 <tr>
                     <td>Titulo</td>
@@ -33,7 +33,7 @@
 
             </table>
             <input type="hidden" name="txtId" value="<%=p.getId()%>" />
-            <a href="index.jsp">Volver</a>
+            <a href="index.html">Volver</a>
         </form>
     </body>
 </html>

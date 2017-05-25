@@ -37,7 +37,7 @@
 
             </table>
             <input type="hidden" name="txtId" value="<%=a.getId()%>" />
-            <a href="index.jsp">Volver</a>
+            <a href="index.html">Volver</a>
         </form>
     </body>
 </html>

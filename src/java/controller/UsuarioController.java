@@ -70,14 +70,16 @@ public class UsuarioController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String Id = request.getParameter("Id");
         String Nombre = request.getParameter("Nombre");
         String Apellido = request.getParameter("Apellido");
         String User = request.getParameter("User");
         String Password = request.getParameter("Password");
         String Email = request.getParameter("Email");
-        String idUpdate = request.getParameter("Id");
+        String FechaCreacion = "24/05/17";
+        //String idUpdate = request.getParameter("Id");
         
-        System.out.print(idUpdate);
+        
         UsuarioDAO UsDAO = new UsuarioDAO();
         String ruta = request.getRequestURI();
         String accion = Ayudante.getAccion(ruta);
@@ -87,28 +89,28 @@ public class UsuarioController extends HttpServlet {
             case "ingresar":
                 Usuario u = new Usuario();
                 //u.setId(Integer.parseInt("id"));
-                u.setPerfil_id(Integer.parseInt("perfil_id"));
+                //u.setPerfil_id(Integer.parseInt("perfil_id"));
                 u.setNombre(Nombre);
                 u.setApellido(Apellido);
                 u.setUser(User);
                 u.setPassword(Password);
                 u.setEmail(Email);
-                u.setFechacreacion(String.valueOf("fechacreacion"));
+                u.setFechacreacion(FechaCreacion);
                 
                 UsDAO.ingresar(u);
                 break;
             case "modificar":
                 Usuario Us = new Usuario();
-                //Us.setId(Integer.parseInt("id"));
-                Us.setPerfil_id(Integer.parseInt("perfil_id"));
+                //Us.setId(Id);
+                //Us.setPerfil_id(Integer.parseInt("perfil_id"));
                 Us.setNombre(Nombre);
                 Us.setApellido(Apellido);
                 Us.setUser(User);
                 Us.setPassword(Password);
                 Us.setEmail(Email);
-                Us.setFechacreacion(String.valueOf("fechacreacion"));
+                Us.setFechacreacion(FechaCreacion);
                 
-                UsDAO.modificar(Us, Integer.parseInt(idUpdate));
+                UsDAO.modificar(Us, Integer.parseInt(Id));
                 break;
             default:
                 throw new AssertionError();

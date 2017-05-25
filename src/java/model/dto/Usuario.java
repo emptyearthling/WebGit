@@ -21,7 +21,6 @@ public class Usuario {
     private String password;
     private String email;
     private String fechacreacion;
-    private String detalle;
 
     public Usuario() {
         this.id = 0;
@@ -32,10 +31,9 @@ public class Usuario {
         this.password = "";
         this.email = "";
         this.fechacreacion = "";
-        this.detalle = "";
     }
 
-    public Usuario(int id, int perfil_id, String nombre, String apellido, String user, String password, String email, String fechacreaion, String detalle) {
+    public Usuario(int id, int perfil_id, String nombre, String apellido, String user, String password, String email, String fecha, String detalle) {
         this.id = id;
         this.perfil_id = perfil_id;
         this.nombre = nombre;
@@ -43,8 +41,8 @@ public class Usuario {
         this.user = user;
         this.password = password;
         this.email = email;
-        this.fechacreacion = fechacreaion;
-        this.detalle = detalle;
+        this.fechacreacion = fecha;
+
     }
 
     public String getUser() {
@@ -111,11 +109,12 @@ public class Usuario {
         this.fechacreacion = fechacreaion;
     }
 
-    public String getDetalle() {
+    /* public String getDetalle() {
         return detalle;
     }
 
     public void setDetalle(String detalle) {
         this.detalle = detalle;
     }
+     */
 }

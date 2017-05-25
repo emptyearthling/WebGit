@@ -89,7 +89,7 @@ public class ComentarioController extends HttpServlet {
             case "ingresar":
                 Comentario c = new Comentario();
                 
-                //c.setId(Integer.parseInt(id));
+                //c.setId(Integer.parseInt(idUpdate));
                 c.setUsuario_id(Integer.parseInt(usuario_id));
                 c.setPost_id(Integer.parseInt(post_id));
                 c.setComentario(comentario);

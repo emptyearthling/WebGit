@@ -18,7 +18,7 @@ public class Conexion {
     private String socket = "localhost:3306";
     private String user = "root";
     private String pass = "system";
-    private String database = "ejemplo_clase";
+    private String database = "pruebaweb2";
 
     private Connection con;
     private Statement st;
